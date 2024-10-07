@@ -23,10 +23,12 @@ export const journalSlice = createSlice({
       state.notes = action.payload;
     },
     setSaving: (state) => {
-      
+      state.isSaving = true;
+      // Msj de error
     },
     updateNote: (state, action) => {
-
+      state.isSaving = false;
+      
     },
     deleteNodeById: (state, action) => {
 
